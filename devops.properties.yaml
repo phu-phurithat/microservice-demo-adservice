@@ -32,8 +32,3 @@ security:
       - "/api"
       - "/health"
       - "/admin/login"
-
-# Deployment
-auto_deploy:
-  enable: false
-  target_env: "dev"
