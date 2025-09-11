@@ -112,15 +112,9 @@ task adServiceClient(type: CreateStartScripts) {
     //          ["-agentpath:/opt/cprof/profiler_java_agent.so=-cprof_service=adserviceclient,-cprof_service_version=1.0.0"]
 }
 
-distributions {
-    main {
-        contents {
-            into("bin") {
-                from(adService)
-                from(adServiceClient)
-                fileMode = 0755
-            }
-        }
-    }
+applicationDistribution.into('bin') {
+    from(adService)
+    from(adServiceClient)
+    fileMode = 0755
 }
 
